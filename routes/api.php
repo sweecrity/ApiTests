@@ -25,7 +25,7 @@ Route::post("Login",[UserController::class,'index']);
 
 Route::group(['middleware'=>'auth:sanctum'],function()
 {
-    Route::get("Information/{id?}",[EmployeeController::class,'list']);
+    Route::get("information/{id?}",[EmployeeController::class,'list']);
 
     Route::post("AddInformation",[EmployeeController::class,'addlist']);
 });
